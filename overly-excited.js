@@ -7,15 +7,15 @@ let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the
     the array as the sole argument. It should iterate over the array
     and output the words to the browser console.
 */
-function addExcitement(theWordArray) {
+function addExcitement(theWordArray, userChoice) {
     var holding = "";
-    var exclamations = "!";
+    var choiceAccumulator = userChoice;
     for (let i = 0; i < sentence.length; i++) {
 
         if( (i + 1) % 3 === 0) {
-            holding += sentence[i] + exclamations + " ";
+            holding += sentence[i] + choiceAccumulator + " ";
             console.log(holding);
-            exclamations += "!";
+            choiceAccumulator += userChoice;
         } 
         else {
             holding += sentence[i] + " ";
@@ -25,4 +25,4 @@ function addExcitement(theWordArray) {
 }
 
 // Invoke the function and pass in the array
-addExcitement(sentence);
+addExcitement(sentence, "?");
