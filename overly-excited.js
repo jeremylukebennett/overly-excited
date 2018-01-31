@@ -1,6 +1,7 @@
 // Create an array that contains the words in the sentence
 // The walrus danced through the trees in the light of the moon
 let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the", "light", "of", "the", "moon"];
+let nextSentence = ["This", "is", "the", "next", "sentence", "that", "I", "am", "writing", "right","about", "now"]
 
 /*
     The addExcitement function should be an impure function, and accept
@@ -10,15 +11,15 @@ let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the
 function addExcitement(theWordArray, userChoice) {
     var holding = "";
     var choiceAccumulator = userChoice;
-    for (let i = 0; i < sentence.length; i++) {
+    for (let i = 0; i < theWordArray.length; i++) {
 
         if( (i + 1) % 3 === 0) {
-            holding += sentence[i] + choiceAccumulator + " ";
+            holding += theWordArray[i] + choiceAccumulator + " ";
             console.log(holding);
             choiceAccumulator += userChoice;
         } 
         else {
-            holding += sentence[i] + " ";
+            holding += theWordArray[i] + " ";
             console.log(holding);
         }
     }
@@ -26,3 +27,4 @@ function addExcitement(theWordArray, userChoice) {
 
 // Invoke the function and pass in the array
 addExcitement(sentence, "?");
+addExcitement(nextSentence, "!");
