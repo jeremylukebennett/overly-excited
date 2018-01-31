@@ -9,15 +9,18 @@ let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the
 */
 function addExcitement(theWordArray) {
     var holding = "";
+    var exclamations = "!";
     for (let i = 0; i < sentence.length; i++) {
 
         if( (i + 1) % 3 === 0) {
-            holding += sentence[i] + "! ";
+            holding += sentence[i] + exclamations + " ";
             console.log(holding);
-        } else {
+            exclamations += "!";
+        } 
+        else {
             holding += sentence[i] + " ";
             console.log(holding);
-          }
+        }
     }
 }
 
