@@ -8,7 +8,7 @@ let nextSentence = ["This", "is", "the", "next", "sentence", "that", "I", "am", 
     the array as the sole argument. It should iterate over the array
     and output the words to the browser console.
 */
-function addExcitement(theWordArray, userChoice) {
+let addExcitement = (theWordArray, userChoice) => {
     var holding = "";
     var choiceAccumulator = userChoice;
     for (let i = 0; i < theWordArray.length; i++) {
